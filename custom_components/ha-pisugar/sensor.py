@@ -16,8 +16,8 @@ from homeassistant.helpers.entity import Entity
 
 _LOGGER = logging.getLogger(__name__)
 
-DEFAULT_NAME = "PiSugar"
-DEFAULT_PORT = 5000
+DEFAULT_NAME = "pisugar"
+DEFAULT_PORT = 8123
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     {

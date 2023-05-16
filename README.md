@@ -33,9 +33,9 @@ sensor:
     instances:
       - name: PiSugar 1
         host: 192.168.1.100
-        port: 5000
+        port: 8423
       - name: PiSugar 2
         host: 192.168.1.101
-        port: 5000
+        port: 8423
 
 ```
