@@ -3,11 +3,12 @@
 
 # Daily Schedule Card
 
-[![HACS Badge](https://img.shields.io/badge/HACS-Default-31A9F4.svg?style=for-the-badge)](https://github.com/hacs/integration)
+[![HACS Badge](https://img.shields.io/badge/HACS-Default-31A9F4.svg?style=plastic)](https://github.com/hacs/integration)
 
-[![GitHub Release](https://img.shields.io/github/release/github.com/boywiz/HA-PiSugar.svg?style=for-the-badge&color=blue)](https://github.com/boywiz/HA-PiSugar/releases)
 
-![Project Maintenance](https://img.shields.io/badge/maintainer-Maurice%20Manning-blue.svg?style=for-the-badge)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/boywiz/HA-PiSugar?style=plastic)
+
+![Project Maintenance](https://img.shields.io/badge/maintainer-Maurice%20Manning-blue.svg?style=plastic)
 
 ## Install
 
