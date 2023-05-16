@@ -39,12 +39,3 @@ sensor:
         port: 5000
 
 ```
-
-
-
-
-## Usage
-
-![demo](https://user-images.githubusercontent.com/19599059/212492789-a42c6e4e-a6af-4231-94eb-c01358994bbe.png)
-
-[Usage demo clip](https://user-images.githubusercontent.com/19599059/212492805-c2cf0d27-2ea5-462e-b13f-73010eed1758.mov)

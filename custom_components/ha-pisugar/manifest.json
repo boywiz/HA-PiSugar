@@ -2,6 +2,7 @@
   "domain": "ha-pisugar",
   "name": "HA PiSugar",
   "documentation": "https://github.com/boywiz/HA-PiSugar#readme",
+  "issue_tracker": "https://github.com/boywiz/HA-PiSugar/issues",
   "codeowners": ["@boywiz"],
   "version": "0.7",
   "requirements": [],
