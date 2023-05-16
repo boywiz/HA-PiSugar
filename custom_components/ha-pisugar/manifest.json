@@ -1,11 +1,9 @@
 {
   "domain": "ha-pisugar",
-  "name": "HA-PiSugar",
+  "name": "HA PiSugar",
   "documentation": "https://github.com/boywiz/HA-PiSugar#readme",
   "codeowners": ["@Maurice Manning"],
   "version": "0.7",
   "requirements": [],
-  "translations": true,
-  "config_flow": true,
-  "zeroconf": []
+  "dependencies": []
 }
