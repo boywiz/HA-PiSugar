@@ -1,0 +1,13 @@
+{
+    "domain": "pisugar",
+    "name": "PiSugar",
+    "documentation": "https://github.com/boywiz/HA-PiSugar#readme",
+    "issue_tracker": "https://github.com/boywiz/HA-PiSugar/issues",
+    "codeowners": [
+        "@boywiz" ],
+    "version": "0.7",
+    "hacs": true,
+    "requirements": [],
+    "config_flow": true
+  }
+  
