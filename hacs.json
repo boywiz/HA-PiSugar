@@ -1,8 +1,10 @@
 {
-    "name": "HA PiSugar Sensor",
-    "filename": "HA-PiSugar-dev.zip",
-    "hide_default_branch": true,
-    "homeassistant": "2023.3.0",
-    "render_readme": true,
-    "zip_release": true
+    "name": "PiSugar",
+    "description": "Home Assistant integration for PiSugar battery modules",
+    "repository": "https://github.com/boywiz/HA-PiSugar",
+    "domain": "pisugar",
+    "category": "Integration",
+    "config_flow": true,
+    "homeassistant": "1.0.0"
 }
+  

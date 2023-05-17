@@ -1,13 +1,13 @@
 {
-    "domain": "ha-pisugar",
-    "name": "HA PiSugar",
+    "domain": "pisugar",
+    "name": "PiSugar",
     "documentation": "https://github.com/boywiz/HA-PiSugar#readme",
     "issue_tracker": "https://github.com/boywiz/HA-PiSugar/issues",
     "codeowners": [
         "@boywiz" ],
     "version": "0.7",
-    "config_flow": true,
-    "iot_class": "local_polling",
-    "zeroconf": []
+    "hacs": true,
+    "requirements": [],
+    "config_flow": true
   }
   

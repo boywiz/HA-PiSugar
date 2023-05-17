@@ -1,23 +1,23 @@
-"""Support for Pi Sugar sensors."""
-
+"""Support for PiSugar sensors."""
 import logging
 import socket
-import voluptuous as vol
-import homeassistant.helpers.config_validation as cv
+
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_NAME,
     CONF_HOST,
+    CONF_NAME,
     CONF_PORT,
-    PERCENTAGE,
     DEVICE_CLASS_BATTERY,
+    PERCENTAGE,
 )
 from homeassistant.helpers.entity import Entity
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 
-DEFAULT_NAME = "pisugar"
-DEFAULT_PORT = 8123
+DEFAULT_NAME = "PiSugar"
+DEFAULT_PORT = 5000
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     {
@@ -28,20 +28,20 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
 )
 
 
-def setup_platform(hass, config, add_entities, discovery_info=None):
-    """Set up the Pi Sugar sensor."""
+async def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
+    """Set up the PiSugar sensor."""
     name = config.get(CONF_NAME)
     host = config.get(CONF_HOST)
     port = config.get(CONF_PORT)
 
-    add_entities([pisugarsensor(name, host, port)], True)
+    async_add_entities([PiSugarSensor(name, host, port)], True)
 
 
-class pisugarsensor(Entity):
-    """Representation of a Pi Sugar sensor."""
+class PiSugarSensor(Entity):
+    """Representation of a PiSugar sensor."""
 
     def __init__(self, name, host, port):
-        """Initialize the Pi Sugar sensor."""
+        """Initialize the PiSugar sensor."""
         self._name = name
         self._host = host
         self._port = port
@@ -65,7 +65,7 @@ class pisugarsensor(Entity):
 
     @property
     def device_class(self):
-        """Return the device class of the sensor."""
+        """Return the class of the sensor."""
         return DEVICE_CLASS_BATTERY
 
     @property
@@ -75,11 +75,11 @@ class pisugarsensor(Entity):
 
     @property
     def available(self):
-        """Return the availability of the sensor."""
+        """Return True if the sensor is available."""
         return self._available
 
-    def update(self):
-        """Update the state of the sensor."""
+    async def async_update(self):
+        """Fetch the latest state of the sensor."""
         try:
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 s.settimeout(5)
@@ -89,6 +89,6 @@ class pisugarsensor(Entity):
                 self._state = int(data)
                 self._available = True
         except (socket.timeout, ConnectionRefusedError, OSError) as err:
-            _LOGGER.error("Error reading Pi Sugar data: %s", err)
+            _LOGGER.error("Error reading PiSugar data: %s", err)
             self._state = None
             self._available = False
