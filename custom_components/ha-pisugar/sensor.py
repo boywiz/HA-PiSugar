@@ -34,10 +34,10 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
     host = config.get(CONF_HOST)
     port = config.get(CONF_PORT)
 
-    add_entities([PiSugarSensor(name, host, port)], True)
+    add_entities([pisugarsensor(name, host, port)], True)
 
 
-class PiSugarSensor(Entity):
+class pisugarsensor(Entity):
     """Representation of a Pi Sugar sensor."""
 
     def __init__(self, name, host, port):
