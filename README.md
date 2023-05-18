@@ -1,4 +1,4 @@
-# HA Pi Sugar UPS
+# HA Pi Sugar UPS Sensor
 
 
 # Daily Schedule Card
@@ -10,14 +10,16 @@
 
 ![Project Maintenance](https://img.shields.io/badge/maintainer-Maurice%20Manning-blue.svg?style=plastic)
 
-- [Home Assistant Octopus Energy](#home-assistant-Pi-Sugar)
+- [Home Assistant (HA) Pi Sugar](#home-assistant-Pi-Sugar)
   - [How to install](#how-to-install)
     - [HACS](#hacs)
     - [Manual](#manual)
   - [How to setup](#how-to-setup)
   - [Target Rate Sensors](#target-rate-sensors)
   - [Services](#services)
-    - [Service octopus\_energy.update\_target\_config](#service-octopus_energyupdate_target_config)
+  
+  //TODO: update this 
+       - [Service pisugar\_energy.update\_target\_config](#service-pisugar_energyupdate_target_config)
   - [Energy Dashboard](#energy-dashboard)
   - [Community Contributions](#community-contributions)
   - [FAQ](#faq)
@@ -54,6 +56,7 @@ Alternatively [download a release](https://github.com/c-st/auto_areas/releases) 
 
 ## Configuration
 
+//TODO: No longer needed ned Screen shot
 ```yaml
 # Place this code in your home assistant configuration file (e.g., configuration.yaml)
 
