@@ -1,6 +1,5 @@
 """The pisugar component."""
 import logging
-
 import voluptuous as vol
 
 from homeassistant.const import CONF_HOST, CONF_NAME, CONF_PORT
