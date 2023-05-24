@@ -11,12 +11,23 @@ _LOGGER = logging.getLogger(__name__)
 
 DATA_SCHEMA = vol.Schema(
     {
-        //TODO: still not presenting correctly
-        vol.Required(CONF_NAME, description={"suggested_value": "PiSugar"}): cv.string,
-        vol.Required(CONF_HOST, description={"placeholder": "Enter the host/IP address"}): cv.string,
-        vol.Optional(CONF_PORT, default=8123, description={"placeholder": "Enter the port"}): cv.port,
+        vol.Required(
+            CONF_NAME,
+            default="PiSugar",
+            description={"suggested_value": "PiSugar", "name": "Name"},
+        ): cv.string,
+        vol.Required(
+            CONF_HOST,
+            description={"placeholder": "Enter the host/IP address", "name": "Host"},
+        ): cv.string,
+        vol.Optional(
+            CONF_PORT,
+            default=5000,
+            description={"placeholder": "Enter the port", "name": "Port"},
+        ): cv.port,
     }
 )
+
 
 class PiSugarConfigFlow(config_entries.ConfigFlow, domain="pisugar"):
     """Handle a PiSugar config flow."""
